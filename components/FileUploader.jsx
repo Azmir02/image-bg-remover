@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState, useRef } from "react";
 
 export default function FileUploader() {
@@ -64,10 +65,15 @@ export default function FileUploader() {
       <div>
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="w-full md:w-[55%]">
-            <video className="w-[80%]" autoPlay muted playsInline>
-              <source src="assets/emilia_compressed.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className="w-full h-[400px] overflow-hidden rounded-md">
+              <Image
+                src="/assets/cam.jpg"
+                width={500}
+                height={500}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
             <h1 className="font-bold text-3xl text-black font-sans">
               Instantly Remove Backgrounds from Your Images! ✨
             </h1>
